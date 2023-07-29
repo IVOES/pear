@@ -1,0 +1,194 @@
+examples/home_camera/main.c:56:10: style: The scope of the variable 'size' can be reduced. [variableScope]
+  size_t size;
+         ^
+examples/home_camera/main.c:57:11: style: The scope of the variable 'packet' can be reduced. [variableScope]
+  uint8_t packet[1500];
+          ^
+examples/home_camera/main.c:60:14: style: The scope of the variable 'buffer' can be reduced. [variableScope]
+  GstBuffer *buffer;
+             ^
+examples/surveillance/main.c:53:14: warning: Redundant assignment of 'gst_pt' to itself. [selfAssignment]
+  int gst_pt = gst_pt = peer_connection_get_rtpmap(g_surveillance.pc, CODEC_H264);
+             ^
+examples/surveillance/main.c:87:18: style: The scope of the variable 'rtp_packet' can be reduced. [variableScope]
+  static uint8_t rtp_packet[1400] = {0};
+                 ^
+examples/surveillance/main.c:88:7: style: The scope of the variable 'bytes' can be reduced. [variableScope]
+  int bytes;
+      ^
+examples/surveillance/main.c:91:14: style: The scope of the variable 'buffer' can be reduced. [variableScope]
+  GstBuffer *buffer;
+             ^
+examples/video_on_demand/h264_packetizer.c:52:5: warning: Assignment of function parameter has no effect outside the function. Did you forget dereferencing it? [uselessAssignmentPtrArg]
+    h264_packetizer = NULL;
+    ^
+examples/video_on_demand/h264_parser.c:26:5: warning: Assignment of function parameter has no effect outside the function. Did you forget dereferencing it? [uselessAssignmentPtrArg]
+    h264_frame = NULL;
+    ^
+src/dtls_transport.c:247:21: style: Variable 'buf' is assigned a value that is never used. [unreadVariable]
+  uint8_t buf[2048] = {0};
+                    ^
+src/nice_agent_bio.c:68:37: style:inconclusive: Function 'nice_agent_bio_free' argument 1 names different: declaration 'data' definition 'bio'. [funcArgNamesDifferent]
+static int nice_agent_bio_free(BIO *bio) {
+                                    ^
+src/nice_agent_bio.c:20:37: note: Function 'nice_agent_bio_free' argument 1 names different: declaration 'data' definition 'bio'.
+static int nice_agent_bio_free(BIO *data);
+                                    ^
+src/nice_agent_bio.c:68:37: note: Function 'nice_agent_bio_free' argument 1 names different: declaration 'data' definition 'bio'.
+static int nice_agent_bio_free(BIO *bio) {
+                                    ^
+src/nice_agent_bio.c:83:55: style:inconclusive: Function 'nice_agent_bio_write' argument 2 names different: declaration 'buf' definition 'in'. [funcArgNamesDifferent]
+static int nice_agent_bio_write(BIO *bio, const char *in, int inl) {
+                                                      ^
+src/nice_agent_bio.c:16:55: note: Function 'nice_agent_bio_write' argument 2 names different: declaration 'buf' definition 'in'.
+static int nice_agent_bio_write(BIO *bio, const char *buf, int num);
+                                                      ^
+src/nice_agent_bio.c:83:55: note: Function 'nice_agent_bio_write' argument 2 names different: declaration 'buf' definition 'in'.
+static int nice_agent_bio_write(BIO *bio, const char *in, int inl) {
+                                                      ^
+src/nice_agent_bio.c:83:63: style:inconclusive: Function 'nice_agent_bio_write' argument 3 names different: declaration 'num' definition 'inl'. [funcArgNamesDifferent]
+static int nice_agent_bio_write(BIO *bio, const char *in, int inl) {
+                                                              ^
+src/nice_agent_bio.c:16:64: note: Function 'nice_agent_bio_write' argument 3 names different: declaration 'num' definition 'inl'.
+static int nice_agent_bio_write(BIO *bio, const char *buf, int num);
+                                                               ^
+src/nice_agent_bio.c:83:63: note: Function 'nice_agent_bio_write' argument 3 names different: declaration 'num' definition 'inl'.
+static int nice_agent_bio_write(BIO *bio, const char *in, int inl) {
+                                                              ^
+src/nice_agent_bio.c:100:57: style:inconclusive: Function 'nice_agent_bio_ctrl' argument 3 names different: declaration 'arg1' definition 'num'. [funcArgNamesDifferent]
+static long nice_agent_bio_ctrl(BIO *bio, int cmd, long num, void *ptr) {
+                                                        ^
+src/nice_agent_bio.c:18:57: note: Function 'nice_agent_bio_ctrl' argument 3 names different: declaration 'arg1' definition 'num'.
+static long nice_agent_bio_ctrl(BIO *bio, int cmd, long arg1, void *arg2);
+                                                        ^
+src/nice_agent_bio.c:100:57: note: Function 'nice_agent_bio_ctrl' argument 3 names different: declaration 'arg1' definition 'num'.
+static long nice_agent_bio_ctrl(BIO *bio, int cmd, long num, void *ptr) {
+                                                        ^
+src/nice_agent_bio.c:100:68: style:inconclusive: Function 'nice_agent_bio_ctrl' argument 4 names different: declaration 'arg2' definition 'ptr'. [funcArgNamesDifferent]
+static long nice_agent_bio_ctrl(BIO *bio, int cmd, long num, void *ptr) {
+                                                                   ^
+src/nice_agent_bio.c:18:69: note: Function 'nice_agent_bio_ctrl' argument 4 names different: declaration 'arg2' definition 'ptr'.
+static long nice_agent_bio_ctrl(BIO *bio, int cmd, long arg1, void *arg2);
+                                                                    ^
+src/nice_agent_bio.c:100:68: note: Function 'nice_agent_bio_ctrl' argument 4 names different: declaration 'arg2' definition 'ptr'.
+static long nice_agent_bio_ctrl(BIO *bio, int cmd, long num, void *ptr) {
+                                                                   ^
+src/peer_connection.c:439:3: warning: Assignment of function parameter has no effect outside the function. Did you forget dereferencing it? [uselessAssignmentPtrArg]
+  pc = NULL;
+  ^
+src/peer_connection.c:386:10: warning: Either the condition 'pc==NULL' is redundant or there is possible null pointer dereference: pc. [nullPointerRedundantCheck]
+  memset(pc, 0, sizeof(*pc));
+         ^
+src/peer_connection.c:387:9: note: Assuming that condition 'pc==NULL' is not redundant
+  if(pc == NULL)
+        ^
+src/peer_connection.c:386:10: note: Null pointer dereference
+  memset(pc, 0, sizeof(*pc));
+         ^
+src/peer_connection.c:408:58: style:inconclusive: Function 'peer_connection_enable_mdns' argument 2 names different: declaration 'b_enabled' definition 'enabled'. [funcArgNamesDifferent]
+void peer_connection_enable_mdns(PeerConnection *pc, int enabled) {
+                                                         ^
+src/peer_connection.h:112:58: note: Function 'peer_connection_enable_mdns' argument 2 names different: declaration 'b_enabled' definition 'enabled'.
+void peer_connection_enable_mdns(PeerConnection *pc, int b_enabled);
+                                                         ^
+src/peer_connection.c:408:58: note: Function 'peer_connection_enable_mdns' argument 2 names different: declaration 'b_enabled' definition 'enabled'.
+void peer_connection_enable_mdns(PeerConnection *pc, int enabled) {
+                                                         ^
+src/peer_connection.c:456:71: style:inconclusive: Function 'peer_connection_set_remote_description' argument 2 names different: declaration 'sdp' definition 'sdp_text'. [funcArgNamesDifferent]
+void peer_connection_set_remote_description(PeerConnection *pc, char *sdp_text) {
+                                                                      ^
+src/peer_connection.h:85:71: note: Function 'peer_connection_set_remote_description' argument 2 names different: declaration 'sdp' definition 'sdp_text'.
+void peer_connection_set_remote_description(PeerConnection *pc, char *sdp);
+                                                                      ^
+src/peer_connection.c:456:71: note: Function 'peer_connection_set_remote_description' argument 2 names different: declaration 'sdp' definition 'sdp_text'.
+void peer_connection_set_remote_description(PeerConnection *pc, char *sdp_text) {
+                                                                      ^
+src/peer_connection.c:23:11: style: struct member 'CodecCapability::vp8' is never used. [unusedStructMember]
+  uint8_t vp8:1;
+          ^
+src/peer_connection.c:26:11: style: struct member 'CodecCapability::pcmu' is never used. [unusedStructMember]
+  uint8_t pcmu:1;
+          ^
+src/peer_connection.c:489:22: style: Variable 'c' is assigned a value that is never used. [unreadVariable]
+    NiceCandidate* c = (NiceCandidate*)g_slist_nth(plist, 0)->data;
+                     ^
+src/peer_connection.c:458:9: style: Unused variable: len [unusedVariable]
+  gsize len;
+        ^
+src/peer_connection.c:462:7: style: Unused variable: i [unusedVariable]
+  int i;
+      ^
+src/peer_connection_test.c:14:3: error: Code 'testing::InitGoogleTest' is invalid C code. Use --std or --language to configure the language. [syntaxError]
+  testing::InitGoogleTest(&argc, argv);
+  ^
+src/sctp.c:240:5: warning: Assignment of function parameter has no effect outside the function. Did you forget dereferencing it? [uselessAssignmentPtrArg]
+    sctp = NULL;
+    ^
+src/sctp.c:200:9: style: Variable 'ret' is reassigned a value before the old one has been used. [redundantAssignment]
+    ret = usrsctp_connect(sock, (struct sockaddr *)&rconn, sizeof(struct sockaddr_conn));
+        ^
+src/sctp.c:192:9: note: ret is assigned
+    ret = usrsctp_bind(sock, (struct sockaddr *)&sconn, sizeof(sconn));
+        ^
+src/sctp.c:200:9: note: ret is overwritten
+    ret = usrsctp_connect(sock, (struct sockaddr *)&rconn, sizeof(struct sockaddr_conn));
+        ^
+src/session_description.c:102:5: warning: Assignment of function parameter has no effect outside the function. Did you forget dereferencing it? [uselessAssignmentPtrArg]
+    sdp = NULL;
+    ^
+src/session_description.c:133:77: style:inconclusive: Function 'session_description_append_newline' argument 2 names different: declaration 'attribute' definition 'format'. [funcArgNamesDifferent]
+int session_description_append_newline(SessionDescription *sdp, const char *format, ...) {
+                                                                            ^
+src/session_description.h:66:77: note: Function 'session_description_append_newline' argument 2 names different: declaration 'attribute' definition 'format'.
+int session_description_append_newline(SessionDescription *sdp, const char *attribute, ...);
+                                                                            ^
+src/session_description.c:133:77: note: Function 'session_description_append_newline' argument 2 names different: declaration 'attribute' definition 'format'.
+int session_description_append_newline(SessionDescription *sdp, const char *format, ...) {
+                                                                            ^
+src/session_description.c:151:69: style:inconclusive: Function 'session_description_append' argument 2 names different: declaration 'attribute' definition 'format'. [funcArgNamesDifferent]
+int session_description_append(SessionDescription *sdp, const char *format, ...) {
+                                                                    ^
+src/session_description.h:61:69: note: Function 'session_description_append' argument 2 names different: declaration 'attribute' definition 'format'.
+int session_description_append(SessionDescription *sdp, const char *attribute, ...);
+                                                                    ^
+src/session_description.c:151:69: note: Function 'session_description_append' argument 2 names different: declaration 'attribute' definition 'format'.
+int session_description_append(SessionDescription *sdp, const char *format, ...) {
+                                                                    ^
+src/session_description_test.c:29:3: error: Code 'testing::InitGoogleTest' is invalid C code. Use --std or --language to configure the language. [syntaxError]
+  testing::InitGoogleTest(&argc, argv);
+  ^
+src/signaling_http.c:154:3: warning: Assignment of function parameter has no effect outside the function. Did you forget dereferencing it? [uselessAssignmentPtrArg]
+  signaling_http = NULL;
+  ^
+src/signaling_http.c:45:75: style:inconclusive: Function 'signaling_http_set_answer' argument 2 names different: declaration 'answer' definition 'sdp'. [funcArgNamesDifferent]
+void signaling_http_set_answer(SignalingHttp *signaling_http, const char *sdp) {
+                                                                          ^
+src/signaling_http.h:20:75: note: Function 'signaling_http_set_answer' argument 2 names different: declaration 'answer' definition 'sdp'.
+void signaling_http_set_answer(SignalingHttp *signaling_http, const char *answer);
+                                                                          ^
+src/signaling_http.c:45:75: note: Function 'signaling_http_set_answer' argument 2 names different: declaration 'answer' definition 'sdp'.
+void signaling_http_set_answer(SignalingHttp *signaling_http, const char *sdp) {
+                                                                          ^
+src/peer_connection.c:442:0: style: The function 'peer_connection_add_stream' is never used. [unusedFunction]
+
+^
+src/peer_connection.c:408:0: style: The function 'peer_connection_enable_mdns' is never used. [unusedFunction]
+
+^
+src/peer_connection.c:556:0: style: The function 'peer_connection_get_ssrc' is never used. [unusedFunction]
+
+^
+src/peer_connection.c:260:0: style: The function 'peer_connection_send_rtcp_pil' is never used. [unusedFunction]
+
+^
+src/rtcp_packet.c:33:0: style: The function 'rtcp_packet_get_fir' is never used. [unusedFunction]
+
+^
+src/sctp.c:229:0: style: The function 'sctp_destroy' is never used. [unusedFunction]
+
+^
+src/signaling.c:67:0: style: The function 'signaling_shutdown' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
